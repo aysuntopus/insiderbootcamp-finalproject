@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Tests">
+	<listeners>
+		<listener class-name="testcases.resources.Listeners" />
+	</listeners>
+	<tests>
+		<test name="insiderCareers">
+			<classes>
+				<class name="testcases.tests.DisplayHomePage" />
+				<class name="testcases.tests.DisplayCareerPage" />
+				<class name="testcases.tests.DisplayQAJobs" />
+			</classes>
+		</test>			
+	</tests>
+</suite>
