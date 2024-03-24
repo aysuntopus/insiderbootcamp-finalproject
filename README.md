@@ -38,7 +38,12 @@ This project uses the following dependencies:
       mvn test -P {browserName}
     
     ```
-## CI ScreenShot
+## Continuous integration
+- Added GitHub Webhook settings:
+![Webhook](https://i.postimg.cc/VNLCRp43/webhooks.png)
+
+![Webhook](https://i.postimg.cc/nhTsCTZT/webhooks2.png)
+
 - Added screenshot from Jenkins Test Results included test duration, fail and pass info, also you can find them under Test-screenshot File.
 ![Test Result](https://i.postimg.cc/Yq4T4Zpq/Jenkinstestoutput.png)
 
