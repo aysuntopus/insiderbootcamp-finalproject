@@ -86,6 +86,23 @@
 					<target>11</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>write-project-properties</goal>
+						</goals>
+						<configuration>
+							<outputFile>
+								${project.build.outputDirectory}/properties-from-pom.properties</outputFile>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 	<!-- profiles -->
@@ -95,6 +112,7 @@
 			<id>firefox</id>
 			<properties>
 				<capabilities>/firefox.capabilities</capabilities>
+				<browserName>firefox</browserName>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
@@ -104,68 +122,7 @@
 			<id>chrome</id>
 			<properties>
 				<capabilities>/chrome.capabilities</capabilities>
-			</properties>
-		</profile>
-		<profile>
-			<id>ie</id>
-			<properties>
-				<capabilities>/ie.capabilities</capabilities>
-			</properties>
-		</profile>
-		<profile>
-			<id>safari</id>
-			<properties>
-				<capabilities>/safari.capabilities</capabilities>
-			</properties>
-		</profile>
-		<profile>
-			<id>opera</id>
-			<properties>
-				<capabilities>/opera.capabilities</capabilities>
-			</properties>
-		</profile>
-		<!-- environments -->
-		<profile>
-			<id>localhost</id>
-			<properties>
-				<site.url>http://localhost/</site.url>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<id>devhost</id>
-			<properties>
-				<site.url>http://devhost/</site.url>
-			</properties>
-		</profile>
-		<profile>
-			<id>testhost</id>
-			<properties>
-				<site.url>http://testhost/</site.url>
-			</properties>
-		</profile>
-		<profile>
-			<id>prodhost</id>
-			<properties>
-				<site.url>http://prodhost.com/</site.url>
-			</properties>
-		</profile>
-		<!-- grid -->
-		<profile>
-			<id>nogrid</id>
-			<properties>
-				<grid.url></grid.url>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<id>grid</id>
-			<properties>
-				<grid.url>http://localhost:4444/wd/hub/</grid.url>
+				<browserName>chrome</browserName>
 			</properties>
 		</profile>
 	</profiles>

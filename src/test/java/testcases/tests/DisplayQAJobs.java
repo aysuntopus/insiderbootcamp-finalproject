@@ -22,14 +22,14 @@ public class DisplayQAJobs extends BaseTest {
 	public void displayJobs() throws InterruptedException {
 		getDriver().get("https://useinsider.com/careers/quality-assurance/");
 		acceptCookies();
-		
-		scrollDown(300);		
+
+		scrollDown(300);
 		_qaJobsPage.getAllQAJobsButton().click();
-			
+
 		waitUntilPageIsLoaded();
 		scrollDown(300);
 
-		Thread.sleep(2000);	// it needs time to load combobox
+		Thread.sleep(2000); // it needs time to load combobox
 		_qaJobsPage.getFilterLocationButton().click();
 		_qaJobsPage.getSelectLocation().click(); // selects Istanbul as location
 

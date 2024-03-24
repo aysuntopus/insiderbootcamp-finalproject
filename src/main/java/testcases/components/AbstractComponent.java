@@ -101,7 +101,7 @@ public abstract class AbstractComponent {
 	public String takeScreenShot(String testname) {
 		TakesScreenshot ts = (TakesScreenshot) _driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir") + "//reports" + testname + ".png");
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testname + ".png");
 		try {
 			FileUtils.copyFile(source, file);
 		} catch (IOException e) {
