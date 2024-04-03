@@ -1,5 +1,5 @@
 # insiderbootcamp-final-project
-
+test
 
 
 The repository contains tests based on Page Object Model, Selenium, TestNG using Java for insider bootcamp final project.
